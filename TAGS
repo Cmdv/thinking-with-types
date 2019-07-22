@@ -9,6 +9,28 @@ main main4,5
 ./test/Spec.hs,15
 main main0,1
 
+./src/Ch06/Chapter06.hs,565
+module Ch06.Chapter06 Ch06.Chapter061,2
+id' id'8,9
+applyTofive applyTofive12,13
+cont cont28,29
+runCont runCont31,32
+newtype Cont Cont36,37
+    unCont unCont38,39
+instance Functor Functor Cont43,44
+  fmap fmap44,45
+instance Applicative Applicative Cont48,49
+  pure pure50,51
+  (<(<*>)52,53
+instance Monad Monad Cont57,58
+  return return58,59
+  Cont Cont59,60
+withVersionNumber withVersionNumber62,63
+withTimeStamp withTimeStamp65,66
+withOS withOS68,69
+releaseString releaseString71,72
+releaseStringCont releaseStringCont78,79
+
 ./src/Ch01/Chapter01.hs,928
 module Ch01.Chapter01 Ch01.Chapter010,1
 data TicTacToe TicTacToe13,14
@@ -79,7 +101,7 @@ type family family29,30
 type family family35,36
   Not Not36,37
 
-./src/Ch05/Chapter05.hs,846
+./src/Ch05/Chapter05.hs,695
 module Ch05.Chapter05 Ch05.Chapter0510,11
 data Expr Expr17,18
   LitInt LitInt18,19
@@ -96,17 +118,14 @@ data HList (ts ts35,36
 hLength hLength40,41
 hHead hHead44,45
 showBool showBool47,48
-instance Eq Eq (HList '[])51,52
-  HNil HNil52,53
-instance (E(Eq t, Eq (HList ts)) => Eq (HList (t ': ts))54,55
-  (a(a:#as)55,56
-instance Ord Ord (HList '[])59,60
-  compare compare60,61
-instance (O(Ord t, Ord (HList ts)) => Ord (HList (t ': ts))62,63
-  compare compare63,64
-instance Show Show (HList '[])68,69
-  show show69,70
-instance (S(Show t, Show (HList ts)) => Show (HList (t ': ts))71,72
-  show show72,73
 type family family74,75
   AllEq AllEq75,76
+type family family78,79
+  All All80,81
+instance All All Eq ts => Eq (HList ts)84,85
+  HNil HNil85,86
+  (a(a:#as)86,87
+instance (A(All Eq ts, All Ord ts) => Ord (HList ts)90,91
+   compare compare91,92
+instance (A(All Show ts) => Show (HList ts)95,96
+  show show96,97
