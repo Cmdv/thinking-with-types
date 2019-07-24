@@ -6,7 +6,7 @@
 {-# LANGUAGE TypeFamilies         #-}
 {-# LANGUAGE TypeOperators        #-}
 {-# LANGUAGE UndecidableInstances #-}
-{-# LANGUAGE FlexibleInstances  #-}
+{-# LANGUAGE FlexibleInstances    #-}
 
 module Ch05.Chapter05 where
 

@@ -82,3 +82,10 @@ releaseStringCont = runCont $ unCont $ do
   date <- Cont withTimeStamp
   os <- Cont withOS
   pure $ os ++ "-" ++ show version ++ "-" ++ show date
+
+-- Exercise 6.4-iv
+
+newtype ContT m a = ContT
+  {
+    unContT :: forall r. (a -> m r) -> m r
+  }
